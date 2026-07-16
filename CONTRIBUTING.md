@@ -288,7 +288,7 @@ Should follow PyPI conventions:
 - [Package Structure Guide](./packages/README.md)
 - [Example Package](./packages/example-security/)
 - [Victor Documentation](https://docs.victor.dev)
-- [GitHub Discussions](https://github.com/vjsingh1984/victor-registry/discussions)
+- [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
 
 ### Asking Questions
 

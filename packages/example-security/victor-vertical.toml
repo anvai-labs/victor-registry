@@ -9,10 +9,10 @@ license = "Apache-2.0"
 requires_victor = ">=0.5.0"
 
 # python_package = "victor-example-security"  # Not published on PyPI
-homepage = "https://github.com/vjsingh1984/victor-registry"
-repository = "https://github.com/vjsingh1984/victor-registry"
-documentation = "https://github.com/vjsingh1984/victor-registry/tree/main/packages/example-security"
-issues = "https://github.com/vjsingh1984/victor-registry/issues"
+homepage = "https://github.com/anvai-labs/victor-registry"
+repository = "https://github.com/anvai-labs/victor-registry"
+documentation = "https://github.com/anvai-labs/victor-registry/tree/main/packages/example-security"
+issues = "https://github.com/anvai-labs/victor-registry/issues"
 
 category = "example"
 tags = ["example", "security", "demo", "sast", "vulnerability"]

@@ -1,7 +1,7 @@
 # Victor Registry Setup Status
 
 **Date**: 2026-01-09
-**Repository**: https://github.com/vjsingh1984/victor-registry
+**Repository**: https://github.com/anvai-labs/victor-registry
 **Status**: ✅ Successfully Created and Integrated
 
 ---
@@ -15,7 +15,7 @@ The Victor package registry has been successfully created on GitHub and integrat
 ## Repository Details
 
 ### Basic Information
-- **Repository URL**: https://github.com/vjsingh1984/victor-registry
+- **Repository URL**: https://github.com/anvai-labs/victor-registry
 - **Description**: Central package registry for Victor verticals - discover, install, and share community verticals
 - **Visibility**: Public
 - **License**: Apache-2.0
@@ -164,7 +164,7 @@ victor vertical install victor-security
 ### For Developers
 
 **Add a new vertical to the registry**:
-1. Create your vertical package following the [CONTRIBUTING.md](https://github.com/vjsingh1984/victor-registry/blob/main/CONTRIBUTING.md) guidelines
+1. Create your vertical package following the [CONTRIBUTING.md](https://github.com/anvai-labs/victor-registry/blob/main/CONTRIBUTING.md) guidelines
 2. Fork the repository
 3. Add your package to `packages/your-vertical-name/`
 4. Update `index.json` with your package metadata
@@ -209,7 +209,7 @@ victor vertical install victor-security
 ### Branch Protection Rules
 The branch protection API requires additional permissions. To configure manually:
 
-1. Go to: https://github.com/vjsingh1984/victor-registry/settings/branches
+1. Go to: https://github.com/anvai-labs/victor-registry/settings/branches
 2. Click "Add rule" for branch `main`
 3. Configure:
    - ✅ Require a pull request before merging
@@ -269,7 +269,7 @@ To make this the official Victor registry:
 **Solution**: Clear local cache with `victor vertical clear-cache`
 
 ### Issue: PR validation failing
-**Solution**: Check workflow logs at https://github.com/vjsingh1984/victor-registry/actions
+**Solution**: Check workflow logs at https://github.com/anvai-labs/victor-registry/actions
 
 ### Issue: Package not appearing in search
 **Solution**: Ensure metadata is complete and tags are relevant
@@ -281,13 +281,13 @@ To make this the official Victor registry:
 
 ## Contact and Support
 
-- **Repository**: https://github.com/vjsingh1984/victor-registry
-- **Issues**: https://github.com/vjsingh1984/victor-registry/issues
-- **Discussions**: https://github.com/vjsingh1984/victor-registry/discussions
+- **Repository**: https://github.com/anvai-labs/victor-registry
+- **Issues**: https://github.com/anvai-labs/victor-registry/issues
+- **Discussions**: https://github.com/anvai-labs/victor-registry/discussions
 
 For questions about Victor verticals, visit:
-- **Victor Repo**: https://github.com/vjsingh1984/victor
-- **Victor Docs**: https://github.com/vjsingh1984/victor/blob/main/README.md
+- **Victor Repo**: https://github.com/anvai-labs/victor
+- **Victor Docs**: https://github.com/anvai-labs/victor/blob/main/README.md
 
 ---
 

@@ -336,6 +336,6 @@ See [example-security/](./example-security/) for a complete, production-ready ex
 ## Support
 
 For questions or issues:
-- [GitHub Issues](https://github.com/vjsingh1984/victor-registry/issues)
-- [GitHub Discussions](https://github.com/vjsingh1984/victor-registry/discussions)
+- [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
+- [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
 - Email: singhvjd@gmail.com
