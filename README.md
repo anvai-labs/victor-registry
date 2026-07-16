@@ -191,8 +191,8 @@ This registry is licensed under the Apache License 2.0. Individual packages reta
 
 ## Contact
 
-- Issues: [GitHub Issues](https://github.com/vjsingh1984/victor-registry/issues)
-- Discussions: [GitHub Discussions](https://github.com/vjsingh1984/victor-registry/discussions)
+- Issues: [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
+- Discussions: [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
 - Email: singhvjd@gmail.com
 
 ## See Also

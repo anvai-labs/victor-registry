@@ -43,7 +43,7 @@ git commit -m "Initial commit: Victor registry setup"
 
 ```bash
 # Add remote
-git remote add origin https://github.com/vjsingh1984/victor-registry.git
+git remote add origin https://github.com/anvai-labs/victor-registry.git
 
 # Push main branch
 git push -u origin main
@@ -454,7 +454,7 @@ victor vertical list --source available
 
 Discover and install third-party extensions for Victor AI coding assistant.
 
-📦 View packages: https://github.com/vjsingh1984/victor-registry
+📦 View packages: https://github.com/anvai-labs/victor-registry
 📖 Learn more: https://docs.victor.dev/verticals
 
 #VictorAI #Python #CodingAssistant
@@ -578,8 +578,8 @@ python scripts/validate-index.py
 ## Support
 
 For questions or issues:
-- GitHub Issues: https://github.com/vjsingh1984/victor-registry/issues
-- GitHub Discussions: https://github.com/vjsingh1984/victor-registry/discussions
+- GitHub Issues: https://github.com/anvai-labs/victor-registry/issues
+- GitHub Discussions: https://github.com/anvai-labs/victor-registry/discussions
 - Email: singhvjd@gmail.com
 
 ---

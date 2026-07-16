@@ -269,7 +269,7 @@ git commit -m "Initial commit: Victor registry setup"
 ### 3. Push to GitHub
 
 ```bash
-git remote add origin https://github.com/vjsingh1984/victor-registry.git
+git remote add origin https://github.com/anvai-labs/victor-registry.git
 git branch -M main
 git push -u origin main
 ```

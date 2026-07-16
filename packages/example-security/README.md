@@ -163,8 +163,8 @@ This is an example package. For contributing to the actual registry, see:
 ## Support
 
 For questions about creating your own vertical:
-- [GitHub Discussions](https://github.com/vjsingh1984/victor-registry/discussions)
-- [GitHub Issues](https://github.com/vjsingh1984/victor-registry/issues)
+- [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
+- [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
 - Email: singhvjd@gmail.com
 
 ---

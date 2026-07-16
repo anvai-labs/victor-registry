@@ -468,7 +468,7 @@ The registry itself follows semantic versioning:
 
 Announce significant releases:
 
-- [GitHub Discussions](https://github.com/vjsingh1984/victor-registry/discussions)
+- [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
 - [Victor blog](https://victor.dev/blog)
 - [Twitter/X](https://twitter.com/victorai)
 
@@ -521,10 +521,10 @@ If you encounter issues:
    - [packages/README.md](./packages/README.md)
 
 2. **Search issues**
-   - [GitHub Issues](https://github.com/vjsingh1984/victor-registry/issues)
+   - [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
 
 3. **Ask for help**
-   - [GitHub Discussions](https://github.com/vjsingh1984/victor-registry/discussions)
+   - [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
    - Email: singhvjd@gmail.com
 
 ### Maintenance Scripts
