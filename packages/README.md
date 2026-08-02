@@ -1,12 +1,13 @@
 # Victor Vertical Packages
 
-This directory contains all registered vertical packages. Each subdirectory represents a single vertical package with its metadata and documentation.
+This directory contains all registered vertical packages. Each subdirectory represents a single vertical
+package with its metadata and documentation.
 
 ## Package Structure
 
 Each package MUST include the following files:
 
-```
+```text
 packages/your-vertical-name/
 ├── victor-vertical.toml    # REQUIRED: Package metadata
 ├── metadata.json             # REQUIRED: Registry metadata
@@ -15,7 +16,8 @@ packages/your-vertical-name/
 
 ## victor-vertical.toml Specification
 
-The `victor-vertical.toml` file is the core metadata file for your vertical package. It follows the TOML format and MUST include all required fields.
+The `victor-vertical.toml` file is the core metadata file for your vertical package. It follows the TOML
+format and MUST include all required fields.
 
 ### Required Fields
 
@@ -134,6 +136,7 @@ Each package MUST include a README.md with the following sections:
 ### Required Sections
 
 1. **Title and Description**
+
    ```markdown
    # Victor YourVertical
 
@@ -141,6 +144,7 @@ Each package MUST include a README.md with the following sections:
    ```
 
 2. **Installation**
+
    ```markdown
    ## Installation
 
@@ -150,6 +154,7 @@ Each package MUST include a README.md with the following sections:
    ```
 
 3. **Usage**
+
    ```markdown
    ## Usage
 
@@ -161,6 +166,7 @@ Each package MUST include a README.md with the following sections:
    ```
 
 4. **Requirements**
+
    ```markdown
    ## Requirements
 
@@ -170,6 +176,7 @@ Each package MUST include a README.md with the following sections:
    ```
 
 5. **License**
+
    ```markdown
    ## License
 
@@ -232,7 +239,7 @@ EOF
 
 ### 4. Create README.md
 
-```bash
+````bash
 cat > README.md << 'EOF'
 # Victor YourVertical
 
@@ -252,7 +259,8 @@ pip install victor-yourvertical
 
 Apache License 2.0
 EOF
-```
+
+````
 
 ### 5. Validate
 
@@ -336,6 +344,7 @@ See [example-security/](./example-security/) for a complete, production-ready ex
 ## Support
 
 For questions or issues:
+
 - [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
 - [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
-- Email: vijay@anvaiops.com
+- Email: <vijay@anvaiops.com>

@@ -17,6 +17,7 @@ This document is for registry maintainers and covers the operational aspects of 
 ## Overview
 
 The victor-registry is a GitHub-native package registry for Victor verticals. It uses:
+
 - Pull requests for submissions
 - JSON index for programmatic access
 - Automated validation via GitHub Actions
@@ -40,7 +41,7 @@ The victor-registry is a GitHub-native package registry for Victor verticals. It
 
 ## Registry Structure
 
-```
+```text
 victor-registry/
 ├── index.json                  # Master package index (SOURCE OF TRUTH)
 ├── packages/                   # Package entries
@@ -93,6 +94,7 @@ python scripts/check-duplicates.py
 ### Updating Registry Statistics
 
 Statistics are currently manual. Future automation will:
+
 - Track download counts
 - Monitor GitHub stars
 - Calculate quality scores
@@ -103,6 +105,7 @@ Statistics are currently manual. Future automation will:
 ### When to Update
 
 Update `index.json` when:
+
 - A new package is merged
 - A package version is updated
 - A package is deprecated
@@ -247,6 +250,7 @@ python scripts/check-documentation.py packages/new-package
    - Usefulness
 
 3. **Testing** (Optional)
+
    ```bash
    # Install package
    pip install victor-newpackage
@@ -374,6 +378,7 @@ If a security vulnerability is discovered:
    - Low: Backlog (1 month)
 
 2. **Notify author**
+
    ```markdown
    We identified a potential security issue in your package.
 
@@ -401,6 +406,7 @@ If a security vulnerability is discovered:
 If you discover a malicious package:
 
 1. **Immediately remove**
+
    ```bash
    # Remove from index
    # Mark repository as archived
@@ -430,6 +436,7 @@ The registry itself follows semantic versioning:
 ### Release Checklist
 
 1. **Update version in index.json**
+
    ```json
    {
      "version": "1.1.0",
@@ -438,6 +445,7 @@ The registry itself follows semantic versioning:
    ```
 
 2. **Update CHANGELOG.md**
+
    ```markdown
    ## [1.1.0] - 2025-01-09
 
@@ -454,12 +462,14 @@ The registry itself follows semantic versioning:
    ```
 
 3. **Create git tag**
+
    ```bash
    git tag -a v1.1.0 -m "Release v1.1.0"
    git push origin v1.1.0
    ```
 
 4. **Create GitHub release**
+
    ```bash
    gh release create v1.1.0 --notes "Release v1.1.0"
    ```
@@ -507,6 +517,7 @@ ERROR: Invalid TOML: Invalid string (at line 15, column 8)
 ```
 
 **Fix**: Check the TOML file for syntax errors. Common issues:
+
 - Unclosed quotes
 - Invalid escape sequences
 - Missing commas
@@ -525,7 +536,7 @@ If you encounter issues:
 
 3. **Ask for help**
    - [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
-   - Email: vijay@anvaiops.com
+   - Email: <vijay@anvaiops.com>
 
 ### Maintenance Scripts
 
@@ -569,18 +580,21 @@ python scripts/generate-stats.py --unmaintained
 ### Maintainer Checklist
 
 Daily:
+
 - [ ] Check for new PRs
 - [ ] Review submissions
 - [ ] Update index.json if needed
 - [ ] Respond to inquiries
 
 Weekly:
+
 - [ ] Review closed PRs
 - [ ] Update documentation
 - [ ] Check for security issues
 - [ ] Review statistics
 
 Monthly:
+
 - [ ] Review deprecated packages
 - [ ] Update CHANGELOG
 - [ ] Generate statistics report
@@ -588,7 +602,7 @@ Monthly:
 
 ### Contact
 
-Primary maintainer: Vijaykumar Singh (vijay@anvaiops.com)
+Primary maintainer: Vijaykumar Singh (<vijay@anvaiops.com>)
 
 For urgent issues, contact via GitHub Issues with the "urgent" label.
 

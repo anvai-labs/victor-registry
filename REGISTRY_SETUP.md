@@ -32,7 +32,7 @@ git commit -m "Initial commit: Victor registry setup"
 
 ### 1.2 Create GitHub Repository
 
-1. Go to https://github.com/new
+1. Go to <https://github.com/new>
 2. Repository name: `victor-registry`
 3. Description: `Central registry for Victor vertical packages`
 4. Visibility: **Public** (important for discoverability)
@@ -319,6 +319,7 @@ git push
 ### 5.1 Update Repository Topics
 
 On GitHub, go to your repository → **Settings** → **Topics**, and add:
+
 - `victor`
 - `victor-ai`
 - `package-registry`
@@ -329,14 +330,17 @@ On GitHub, go to your repository → **Settings** → **Topics**, and add:
 ### 5.2 Set Up Repository Description
 
 In **Settings** → **General**:
-- Description: `Central registry for Victor vertical packages - the official marketplace for discovering and installing third-party extensions`
+
+- Description: `Central registry for Victor vertical packages - the official marketplace for discovering and
+  installing third-party extensions`
 - Website URL: `https://docs.victor.dev`
 
 ## Step 6: Initial Package Setup
 
 ### 6.1 Review Example Package
 
-The example package is already set up in `/tmp/victor-registry/packages/example-security/`. This serves as a template for submitters.
+The example package is already set up in `/tmp/victor-registry/packages/example-security/`. This serves as a
+template for submitters.
 
 ### 6.2 Test Validation
 
@@ -360,7 +364,7 @@ python scripts/validate-package.py packages/example-security
 
 To test the PR workflow, create a test package:
 
-```bash
+````bash
 # Create test package
 cd /tmp/victor-registry
 mkdir -p packages/test-security
@@ -391,19 +395,24 @@ Apache License 2.0
 EOF
 
 # Validate
+
 python scripts/validate-package.py packages/test-security
 
 # Commit
+
 git add packages/test-security
 git commit -m "Add test-security package for validation testing"
 
 # Push (you'll need to create a branch first)
+
 git checkout -b test-package
 git push -u origin test-package
 
 # Create PR via GitHub CLI
+
 gh pr create --title "Test: Add test-security package" --body "Testing PR workflow"
-```
+
+````
 
 ### 7.2 Review Validation
 
@@ -419,7 +428,8 @@ gh pr create --title "Test: Add test-security package" --body "Testing PR workfl
 Draft an announcement for:
 
 **Victor Blog**:
-```markdown
+
+````markdown
 # Announcing the Victor Vertical Registry
 
 We're excited to announce the official Victor Vertical Registry - a central
@@ -442,20 +452,23 @@ marketplace for discovering and installing third-party verticals.
 ```bash
 victor vertical list --source available
 ```
-```
+
+````
 
 **GitHub Discussions**:
+
 - Create a "Welcome" post
 - Pin to top of discussions
 
 **Twitter/X**:
-```
+
+```text
 🎉 Excited to announce the Victor Vertical Registry!
 
 Discover and install third-party extensions for Victor AI coding assistant.
 
-📦 View packages: https://github.com/anvai-labs/victor-registry
-📖 Learn more: https://docs.victor.dev/verticals
+📦 View packages: <https://github.com/anvai-labs/victor-registry>
+📖 Learn more: <https://docs.victor.dev/verticals>
 
 #VictorAI #Python #CodingAssistant
 ```
@@ -463,6 +476,7 @@ Discover and install third-party extensions for Victor AI coding assistant.
 ### 8.2 Update Documentation
 
 Update Victor documentation to reference the registry:
+
 - Installation guide
 - Vertical development guide
 - API reference
@@ -472,16 +486,19 @@ Update Victor documentation to reference the registry:
 ### 9.1 Regular Tasks
 
 **Daily**:
+
 - Monitor incoming PRs
 - Review submissions
 - Update index.json
 
 **Weekly**:
+
 - Review and merge approved PRs
 - Update statistics
 - Respond to inquiries
 
 **Monthly**:
+
 - Generate statistics report
 - Review deprecated packages
 - Update documentation
@@ -489,6 +506,7 @@ Update Victor documentation to reference the registry:
 ### 9.2 Monitor Metrics
 
 Track:
+
 - Number of packages
 - PR merge rate
 - Average review time
@@ -578,9 +596,10 @@ python scripts/validate-index.py
 ## Support
 
 For questions or issues:
-- GitHub Issues: https://github.com/anvai-labs/victor-registry/issues
-- GitHub Discussions: https://github.com/anvai-labs/victor-registry/discussions
-- Email: vijay@anvaiops.com
+
+- GitHub Issues: <https://github.com/anvai-labs/victor-registry/issues>
+- GitHub Discussions: <https://github.com/anvai-labs/victor-registry/discussions>
+- Email: <vijay@anvaiops.com>
 
 ---
 

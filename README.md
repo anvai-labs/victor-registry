@@ -1,10 +1,13 @@
 # Victor Vertical Registry
 
-Central registry for Victor vertical packages - the official marketplace for discovering, sharing, and installing third-party verticals for the Victor AI coding assistant.
+Central registry for Victor vertical packages - the official marketplace for discovering, sharing, and
+installing third-party verticals for the Victor AI coding assistant.
 
 ## What is a Vertical?
 
-A **vertical** is a domain-specific extension for Victor that provides specialized tools, workflows, and capabilities. Examples include:
+A **vertical** is a domain-specific extension for Victor that provides specialized tools, workflows, and
+capabilities. Examples include:
+
 - Security analysis and vulnerability scanning
 - Data visualization and reporting
 - CI/CD pipeline automation
@@ -14,6 +17,7 @@ A **vertical** is a domain-specific extension for Victor that provides specializ
 ## About This Registry
 
 This registry serves as the central index of all available vertical packages. It's a GitHub-native repository that uses:
+
 - Pull requests for package submissions
 - JSON index for programmatic access
 - Automated validation via GitHub Actions
@@ -24,6 +28,7 @@ This registry serves as the central index of all available vertical packages. It
 ### Browse Verticals
 
 Visit the [packages/](./packages/) directory to see all available verticals. Each package has:
+
 - `victor-vertical.toml` - Package metadata
 - `metadata.json` - Additional metadata (downloads, ratings)
 - `README.md` - Package documentation
@@ -72,7 +77,8 @@ victor vertical list --source available
    - Submit a PR
 
 3. **Required Files**:
-   ```
+
+   ```text
    packages/your-vertical-name/
    ├── victor-vertical.toml    # REQUIRED: Package metadata
    ├── metadata.json             # REQUIRED: Registry metadata
@@ -82,6 +88,7 @@ victor vertical list --source available
 ### Package Requirements
 
 Your package MUST:
+
 - Follow the [victor-vertical.toml specification](./packages/README.md#victor-verticaltoml-specification)
 - Pass validation checks (automatic)
 - Be published on PyPI or publicly accessible via git
@@ -92,6 +99,7 @@ Your package MUST:
 ### Validation
 
 All submissions are automatically validated:
+
 - TOML schema validation
 - Package name uniqueness
 - Version compatibility check
@@ -128,6 +136,7 @@ All submissions are automatically validated:
 ### Registry Management
 
 See [MAINTENANCE.md](./MAINTENANCE.md) for detailed instructions on:
+
 - Updating `index.json`
 - Validating packages
 - Handling updates
@@ -149,7 +158,7 @@ python scripts/generate-stats.py
 
 ## Registry Structure
 
-```
+```text
 victor-registry/
 ├── README.md                   # This file
 ├── index.json                  # Master package index
@@ -193,7 +202,7 @@ This registry is licensed under the Apache License 2.0. Individual packages reta
 
 - Issues: [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
 - Discussions: [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
-- Email: vijay@anvaiops.com
+- Email: <vijay@anvaiops.com>
 
 ## See Also
 
