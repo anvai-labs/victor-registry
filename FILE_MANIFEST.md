@@ -7,6 +7,7 @@ Complete listing of all files in the victor-registry repository with description
 ### Root Documentation (5 files)
 
 #### README.md
+
 - **Purpose**: User-facing registry overview
 - **Audience**: Users wanting to discover and install verticals
 - **Sections**:
@@ -20,6 +21,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Lines**: ~200
 
 #### index.json
+
 - **Purpose**: Master package index (source of truth)
 - **Format**: JSON
 - **Contents**:
@@ -30,6 +32,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Lines**: 30
 
 #### CONTRIBUTING.md
+
 - **Purpose**: Submission guidelines for package authors
 - **Audience**: Package authors
 - **Sections**:
@@ -44,6 +47,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Lines**: ~400
 
 #### MAINTENANCE.md
+
 - **Purpose**: Operations guide for registry maintainers
 - **Audience**: Registry maintainers
 - **Sections**:
@@ -60,6 +64,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Lines**: ~600
 
 #### REGISTRY_SETUP.md
+
 - **Purpose**: Step-by-step GitHub repository setup
 - **Audience**: Registry maintainers setting up the repo
 - **Sections**:
@@ -78,6 +83,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Lines**: ~500
 
 #### REGISTRY_SUMMARY.md
+
 - **Purpose**: Complete overview of the entire registry
 - **Audience**: Anyone wanting a comprehensive understanding
 - **Sections**:
@@ -98,6 +104,7 @@ Complete listing of all files in the victor-registry repository with description
 ### Package Directory (3 files)
 
 #### packages/README.md
+
 - **Purpose**: Package structure and specification reference
 - **Audience**: Package authors
 - **Sections**:
@@ -116,6 +123,7 @@ Complete listing of all files in the victor-registry repository with description
 ### Example Package (3 files)
 
 #### packages/example-security/victor-vertical.toml
+
 - **Purpose**: Example package metadata
 - **Format**: TOML
 - **Sections**:
@@ -129,6 +137,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Status**: ✅ Validated
 
 #### packages/example-security/metadata.json
+
 - **Purpose**: Registry-specific metadata
 - **Format**: JSON
 - **Contents**:
@@ -142,6 +151,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Status**: ✅ Validated
 
 #### packages/example-security/README.md
+
 - **Purpose**: Example package documentation
 - **Sections**:
   - Title and description
@@ -163,6 +173,7 @@ Complete listing of all files in the victor-registry repository with description
 ### Validation Scripts (3 files)
 
 #### scripts/validate-index.py
+
 - **Purpose**: Validate master index.json
 - **Language**: Python 3.10+
 - **Dependencies**: Standard library only
@@ -184,6 +195,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Status**: ✅ Tested and working
 
 #### scripts/validate-package.py
+
 - **Purpose**: Validate single package directory
 - **Language**: Python 3.10+
 - **Dependencies**: Standard library, tomli (Python <3.11)
@@ -205,6 +217,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Status**: ✅ Tested and working
 
 #### scripts/sync-from-pypi.py
+
 - **Purpose**: Sync registry from PyPI (placeholder)
 - **Language**: Python 3.10+
 - **Dependencies**: httpx
@@ -218,6 +231,7 @@ Complete listing of all files in the victor-registry repository with description
 ### GitHub Templates (3 files)
 
 #### .github/PULL_REQUEST_TEMPLATE.md
+
 - **Purpose**: Template for package submission PRs
 - **Sections**:
   - Package Information
@@ -230,6 +244,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Lines**: ~60
 
 #### .github/ISSUE_TEMPLATE/bug_report.md
+
 - **Purpose**: Template for bug reports
 - **Sections**:
   - Bug Description
@@ -243,6 +258,7 @@ Complete listing of all files in the victor-registry repository with description
 - **Lines**: ~50
 
 #### .github/ISSUE_TEMPLATE/security_report.md
+
 - **Purpose**: Template for security vulnerability reports
 - **Sections**:
   - Security warning (email instead of public issue)
@@ -259,7 +275,7 @@ Complete listing of all files in the victor-registry repository with description
 ### By Type
 
 | Type | Count | Total Lines |
-|------|-------|-------------|
+| ------ | ------- | ------------- |
 | Markdown (.md) | 9 | ~2,500 |
 | Python (.py) | 3 | ~560 |
 | JSON (.json) | 2 | ~55 |
@@ -269,7 +285,7 @@ Complete listing of all files in the victor-registry repository with description
 ### By Purpose
 
 | Purpose | Files | Lines |
-|---------|-------|-------|
+| --------- | ------- | ------- |
 | Documentation | 9 | ~2,500 |
 | Validation Code | 2 | 460 |
 | Package Metadata | 2 | 87 |
@@ -279,7 +295,7 @@ Complete listing of all files in the victor-registry repository with description
 
 ### By Directory
 
-```
+```text
 /tmp/victor-registry/
 ├── .github/                    # 3 files (templates)
 │   ├── ISSUE_TEMPLATE/         #   2 files
@@ -352,6 +368,7 @@ The registry integrates with existing Victor code:
 ### To Create GitHub Repository
 
 1. **Initialize git**:
+
    ```bash
    cd /tmp/victor-registry
    git init
@@ -360,13 +377,14 @@ The registry integrates with existing Victor code:
    ```
 
 2. **Create on GitHub**:
-   - Go to https://github.com/new
+   - Go to <https://github.com/new>
    - Name: `victor-registry`
    - Description: `Central registry for Victor vertical packages`
    - Public repository
    - Don't initialize with README
 
 3. **Push to GitHub**:
+
    ```bash
    git remote add origin https://github.com/anvai-labs/victor-registry.git
    git branch -M main
@@ -382,6 +400,7 @@ The registry integrates with existing Victor code:
 ### To Test Registry
 
 1. **Validate everything**:
+
    ```bash
    cd /tmp/victor-registry
    python3 scripts/validate-index.py
@@ -389,6 +408,7 @@ The registry integrates with existing Victor code:
    ```
 
 2. **Test with Victor** (after creating GitHub repo):
+
    ```bash
    victor vertical list --source available
    victor vertical info example-security

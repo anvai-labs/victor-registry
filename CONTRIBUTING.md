@@ -1,6 +1,7 @@
 # Contributing to Victor Registry
 
-Thank you for your interest in contributing to the Victor Vertical Registry! This document provides guidelines for submitting vertical packages.
+Thank you for your interest in contributing to the Victor Vertical Registry! This document provides guidelines
+for submitting vertical packages.
 
 ## Table of Contents
 
@@ -31,11 +32,13 @@ Thank you for your interest in contributing to the Victor Vertical Registry! Thi
 ### Creating Your Submission
 
 1. **Fork the repository**
+
    ```bash
    gh repo fork vjsingh1984/victor-registry
    ```
 
 2. **Create your package directory**
+
    ```bash
    mkdir packages/your-vertical-name
    cd packages/your-vertical-name
@@ -47,11 +50,13 @@ Thank you for your interest in contributing to the Victor Vertical Registry! Thi
    - `README.md` - Package documentation
 
 4. **Validate your package**
+
    ```bash
    python scripts/validate-package.py packages/your-vertical-name
    ```
 
 5. **Submit a pull request**
+
    ```bash
    git add packages/your-vertical-name
    git commit -m "Add victor-your-vertical package"
@@ -77,7 +82,7 @@ Thank you for your interest in contributing to the Victor Vertical Registry! Thi
 
 Every package submission MUST include:
 
-```
+```text
 packages/your-vertical-name/
 ├── victor-vertical.toml    # Package metadata (REQUIRED)
 ├── metadata.json             # Registry metadata (REQUIRED)
@@ -86,9 +91,11 @@ packages/your-vertical-name/
 
 ### victor-vertical.toml
 
-This is the core package metadata file. See [packages/README.md](./packages/README.md#victor-verticaltoml-specification) for the complete specification.
+This is the core package metadata file. See
+[packages/README.md](./packages/README.md#victor-verticaltoml-specification) for the complete specification.
 
 **Minimum required fields**:
+
 ```toml
 [vertical]
 name = "yourvertical"
@@ -260,11 +267,13 @@ To deprecate your package:
 - Should be descriptive but concise
 
 **Good examples**:
+
 - `security`
 - `data_viz`
 - `api_tester`
 
 **Bad examples**:
+
 - `Security` (uppercase)
 - `123package` (starts with number)
 - `my-package` (hyphens not allowed)
@@ -272,11 +281,13 @@ To deprecate your package:
 ### Python Package Names
 
 Should follow PyPI conventions:
+
 - All lowercase
 - Use hyphens for separation
 - Prefix with `victor-` recommended
 
 **Good examples**:
+
 - `victor-security`
 - `victor-data-viz`
 - `victor-api-tester`
@@ -299,12 +310,13 @@ Should follow PyPI conventions:
 
 ### Contact
 
-- Email: singhvjd@gmail.com
+- Email: <vijay@anvaiops.com>
 - GitHub: @vjsingh1984
 
 ## Recognition
 
 Contributors will be:
+
 - Listed in the registry contributors section
 - Mentioned in release notes (with permission)
 - Eligible for contributor badges (future)
@@ -315,7 +327,7 @@ By contributing to this registry, you agree that your contribution will be licen
 
 ## Security
 
-If you discover a security vulnerability, please email singhvjd@gmail.com instead of creating an issue.
+If you discover a security vulnerability, please email <vijay@anvaiops.com> instead of creating an issue.
 
 ---
 

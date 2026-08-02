@@ -1,10 +1,12 @@
 # Victor Example Security Vertical
 
-**IMPORTANT**: This is an **example package** for demonstration purposes only. It showcases the structure and format of a proper Victor vertical package submission. This package does not provide any actual functionality.
+**IMPORTANT**: This is an **example package** for demonstration purposes only. It showcases the structure and
+format of a proper Victor vertical package submission. This package does not provide any actual functionality.
 
 ## Purpose
 
 This example package demonstrates:
+
 - Proper `victor-vertical.toml` structure
 - Required `metadata.json` format
 - Comprehensive documentation
@@ -15,15 +17,18 @@ This example package demonstrates:
 If this were a real security vertical, it would provide:
 
 ### Tools
+
 - `security_scan` - Scan code for security vulnerabilities
 - `vulnerability_check` - Check dependencies for known vulnerabilities
 - `dependency_audit` - Audit project dependencies for security issues
 
 ### Workflows
+
 - `security_review` - Automated security review workflow
 - `vulnerability_assessment` - Comprehensive vulnerability assessment
 
 ### Capabilities
+
 - Static Application Security Testing (SAST)
 - Dependency scanning
 - Security reporting
@@ -52,7 +57,7 @@ victor chat --vertical example-security "Scan my code for vulnerabilities"
 
 This example package includes all required files:
 
-```
+```text
 packages/example-security/
 ├── victor-vertical.toml    # Package metadata (REQUIRED)
 ├── metadata.json             # Registry metadata (REQUIRED)
@@ -62,6 +67,7 @@ packages/example-security/
 ## victor-vertical.toml Breakdown
 
 ### Required Fields
+
 - `name` - Unique identifier (example_security)
 - `version` - Semantic version (1.0.0)
 - `description` - Brief description
@@ -72,6 +78,7 @@ packages/example-security/
 - `class.class_name` - Vertical class name
 
 ### Optional Fields Shown
+
 - `python_package` - PyPI package name (null for this example)
 - `homepage`, `repository`, etc. - URLs
 - `category` - Category for grouping (example)
@@ -86,12 +93,14 @@ packages/example-security/
 
 ## metadata.json Breakdown
 
-### Required Fields
+### Required Fields (metadata.json)
+
 - `name` - Package name (must match victor-vertical.toml)
 - `status` - One of: active, deprecated, unmaintained
 - `maintainer` - Primary maintainer information
 
-### Optional Fields Shown
+### Optional Fields Shown (metadata.json)
+
 - `verified` - Whether verified by registry maintainers
 - `featured` - Whether to feature in the registry
 - `links` - Related URLs
@@ -105,6 +114,7 @@ packages/example-security/
 To create your own vertical package:
 
 1. **Copy this example**
+
    ```bash
    cp -r packages/example-security packages/your-vertical-name
    ```
@@ -128,6 +138,7 @@ To create your own vertical package:
    - Add troubleshooting section
 
 5. **Validate your package**
+
    ```bash
    python scripts/validate-package.py packages/your-vertical-name
    ```
@@ -150,6 +161,7 @@ Apache License 2.0
 ## Contributing
 
 This is an example package. For contributing to the actual registry, see:
+
 - [CONTRIBUTING.md](../../CONTRIBUTING.md)
 - [packages/README.md](../README.md)
 
@@ -163,9 +175,10 @@ This is an example package. For contributing to the actual registry, see:
 ## Support
 
 For questions about creating your own vertical:
+
 - [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
 - [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
-- Email: singhvjd@gmail.com
+- Email: <vijay@anvaiops.com>
 
 ---
 

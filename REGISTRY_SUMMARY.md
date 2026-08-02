@@ -2,11 +2,12 @@
 
 ## Overview
 
-A complete, production-ready repository structure for the victor-registry has been created at `/tmp/victor-registry/`. This registry serves as the central marketplace for Victor vertical packages.
+A complete, production-ready repository structure for the victor-registry has been created at
+`/tmp/victor-registry/`. This registry serves as the central marketplace for Victor vertical packages.
 
 ## Repository Structure
 
-```
+```text
 /tmp/victor-registry/
 ├── README.md                              # Registry overview and user guide
 ├── index.json                             # Master package index (source of truth)
@@ -46,6 +47,7 @@ A complete, production-ready repository structure for the victor-registry has be
 Three-level validation ensures quality:
 
 **Index Validation** (`scripts/validate-index.py`):
+
 - JSON structure validation
 - Required field checks
 - Package entry verification
@@ -53,6 +55,7 @@ Three-level validation ensures quality:
 - Duplicate detection
 
 **Package Validation** (`scripts/validate-package.py`):
+
 - TOML schema validation
 - JSON schema validation
 - README completeness
@@ -60,6 +63,7 @@ Three-level validation ensures quality:
 - Name format validation
 
 **GitHub Actions** (to be created):
+
 - Automated PR validation
 - Continuous integrity checks
 - Status check enforcement
@@ -67,6 +71,7 @@ Three-level validation ensures quality:
 ### 3. Example Package
 
 The `example-security` package demonstrates:
+
 - Complete `victor-vertical.toml` with all fields
 - Comprehensive `metadata.json` structure
 - Professional README with all sections
@@ -77,6 +82,7 @@ The `example-security` package demonstrates:
 ### 4. Submission Process
 
 GitHub-native PR workflow:
+
 1. Author creates package directory
 2. Adds required files (TOML, JSON, README)
 3. Opens PR with template
@@ -177,12 +183,15 @@ install_command = "pip install victor-package"
 ## Naming Conventions
 
 ### Package Names
+
 - **victor-vertical.toml**: Use underscores (e.g., `example_security`)
 - **Directory names**: Can use hyphens (e.g., `example-security`)
 - **Python packages**: Use hyphens with `victor-` prefix (e.g., `victor-security`)
 
 ### Validation Logic
+
 The validation normalizes hyphens and underscores as equivalent:
+
 - `example_security` ≡ `example-security`
 - Both are valid and treated as the same package
 
@@ -224,6 +233,7 @@ The registry integrates with Victor's existing vertical management system:
 ### Registry Manager
 
 Located at `/Users/vijaysingh/code/codingagent/victor/core/verticals/registry_manager.py`:
+
 - Discovers packages from registry
 - Validates before installation
 - Caches metadata locally
@@ -260,7 +270,7 @@ git commit -m "Initial commit: Victor registry setup"
 
 ### 2. Create on GitHub
 
-1. Go to https://github.com/new
+1. Go to <https://github.com/new>
 2. Name: `victor-registry`
 3. Description: `Central registry for Victor vertical packages`
 4. Visibility: **Public**
@@ -277,6 +287,7 @@ git push -u origin main
 ### 4. Configure Settings
 
 See `REGISTRY_SETUP.md` for detailed setup instructions:
+
 - Branch protection
 - GitHub Actions workflows
 - Issue templates
@@ -346,7 +357,7 @@ jobs:
 ### Core Files
 
 | File | Purpose | Lines |
-|------|---------|-------|
+| ------ | --------- | ------- |
 | `README.md` | User documentation | 200+ |
 | `index.json` | Package index | 30 |
 | `CONTRIBUTING.md` | Submission guidelines | 400+ |
@@ -356,7 +367,7 @@ jobs:
 ### Scripts
 
 | Script | Purpose | Lines |
-|--------|---------|-------|
+| -------- | --------- | ------- |
 | `validate-index.py` | Index validation | 180 |
 | `validate-package.py` | Package validation | 280 |
 | `sync-from-pypi.py` | PyPI sync (TODO) | 100 |
@@ -364,7 +375,7 @@ jobs:
 ### Example Package
 
 | File | Purpose | Lines |
-|------|---------|-------|
+| ------ | --------- | ------- |
 | `victor-vertical.toml` | Package metadata | 62 |
 | `metadata.json` | Registry metadata | 25 |
 | `README.md` | Package documentation | 150+ |
@@ -372,7 +383,7 @@ jobs:
 ### Templates
 
 | File | Purpose |
-|------|---------|
+| ------ | --------- |
 | `.github/PULL_REQUEST_TEMPLATE.md` | PR template |
 | `.github/ISSUE_TEMPLATE/bug_report.md` | Bug report |
 | `.github/ISSUE_TEMPLATE/security_report.md` | Security report |
