@@ -525,7 +525,7 @@ If you encounter issues:
 
 3. **Ask for help**
    - [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
-   - Email: singhvjd@gmail.com
+   - Email: vijay@anvaiops.com
 
 ### Maintenance Scripts
 
@@ -588,7 +588,7 @@ Monthly:
 
 ### Contact
 
-Primary maintainer: Vijaykumar Singh (singhvjd@gmail.com)
+Primary maintainer: Vijaykumar Singh (vijay@anvaiops.com)
 
 For urgent issues, contact via GitHub Issues with the "urgent" label.
 

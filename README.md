@@ -193,7 +193,7 @@ This registry is licensed under the Apache License 2.0. Individual packages reta
 
 - Issues: [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
 - Discussions: [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
-- Email: singhvjd@gmail.com
+- Email: vijay@anvaiops.com
 
 ## See Also
 

@@ -244,7 +244,7 @@ when an individual is officially representing the community in public spaces.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the project team: singhvjd@gmail.com
+reported to the project team: vijay@anvaiops.com
 
 All complaints will be reviewed and investigated and will result in a response
 that is deemed necessary and appropriate to the circumstances.
@@ -267,7 +267,7 @@ Create `SECURITY.md`:
 ## Reporting a Vulnerability
 
 If you discover a security vulnerability in this registry, please email
-singhvjd@gmail.com rather than creating a public issue.
+vijay@anvaiops.com rather than creating a public issue.
 
 Please include:
 - Description of the vulnerability
@@ -580,7 +580,7 @@ python scripts/validate-index.py
 For questions or issues:
 - GitHub Issues: https://github.com/anvai-labs/victor-registry/issues
 - GitHub Discussions: https://github.com/anvai-labs/victor-registry/discussions
-- Email: singhvjd@gmail.com
+- Email: vijay@anvaiops.com
 
 ---
 

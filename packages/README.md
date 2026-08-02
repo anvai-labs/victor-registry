@@ -338,4 +338,4 @@ See [example-security/](./example-security/) for a complete, production-ready ex
 For questions or issues:
 - [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
 - [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
-- Email: singhvjd@gmail.com
+- Email: vijay@anvaiops.com

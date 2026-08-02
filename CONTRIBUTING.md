@@ -299,7 +299,7 @@ Should follow PyPI conventions:
 
 ### Contact
 
-- Email: singhvjd@gmail.com
+- Email: vijay@anvaiops.com
 - GitHub: @vjsingh1984
 
 ## Recognition
@@ -315,7 +315,7 @@ By contributing to this registry, you agree that your contribution will be licen
 
 ## Security
 
-If you discover a security vulnerability, please email singhvjd@gmail.com instead of creating an issue.
+If you discover a security vulnerability, please email vijay@anvaiops.com instead of creating an issue.
 
 ---
 

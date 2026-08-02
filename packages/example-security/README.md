@@ -165,7 +165,7 @@ This is an example package. For contributing to the actual registry, see:
 For questions about creating your own vertical:
 - [GitHub Discussions](https://github.com/anvai-labs/victor-registry/discussions)
 - [GitHub Issues](https://github.com/anvai-labs/victor-registry/issues)
-- Email: singhvjd@gmail.com
+- Email: vijay@anvaiops.com
 
 ---
 
