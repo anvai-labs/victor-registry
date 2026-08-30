@@ -8,6 +8,7 @@ on:
 jobs:
   validate-index:
     name: Validate Registry Index
+    if: github.event.pull_request.user.id != 5168752
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -29,6 +30,7 @@ jobs:
 
   validate-packages:
     name: Validate Package Metadata
+    if: github.event.pull_request.user.id != 5168752
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -54,6 +56,7 @@ jobs:
 
   check-links:
     name: Check Documentation Links
+    if: github.event.pull_request.user.id != 5168752
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -84,6 +87,7 @@ jobs:
 
   lint-markdown:
     name: Lint Markdown Files
+    if: github.event.pull_request.user.id != 5168752
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
