@@ -1,0 +1,141 @@
+name: Owner private CI
+
+# SECURITY: pull_request_target loads this workflow from the protected base
+# branch. Never execute it for an untrusted author or a fork, and never add
+# write permissions or secrets. The runner group also exact-allowlists this
+# workflow on refs/heads/main.
+on:
+  pull_request_target:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: owner-private-ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  OWNER_USER_ID: '5168752'
+  PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+
+jobs:
+  validate-index:
+    name: Validate Registry Index (private)
+    if: >-
+      github.actor_id == '5168752' &&
+      github.event.pull_request.user.id == 5168752 &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    environment: owner-private-ci
+    runs-on: [self-hosted, Linux, X64, public-overflow]
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact PR head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ env.PR_HEAD_SHA }}
+          persist-credentials: false
+          clean: true
+
+      - name: Set up Python
+        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip jsonschema
+
+      - name: Validate index.json
+        run: python scripts/validate-index.py
+
+  validate-packages:
+    name: Validate Package Metadata (private)
+    if: >-
+      github.actor_id == '5168752' &&
+      github.event.pull_request.user.id == 5168752 &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    environment: owner-private-ci
+    runs-on: [self-hosted, Linux, X64, public-overflow]
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact PR head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ env.PR_HEAD_SHA }}
+          persist-credentials: false
+          clean: true
+
+      - name: Set up Python
+        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip jsonschema toml tomli packaging
+
+      - name: Validate package metadata
+        run: python scripts/validate-package.py packages/example-security
+
+  check-links:
+    name: Check Documentation Links (private)
+    if: >-
+      github.actor_id == '5168752' &&
+      github.event.pull_request.user.id == 5168752 &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    environment: owner-private-ci
+    runs-on: [self-hosted, Linux, X64, public-overflow]
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact PR head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ env.PR_HEAD_SHA }}
+          persist-credentials: false
+          clean: true
+
+      - name: Check documentation links
+        shell: bash
+        run: |
+          urls=$(python3 -c "
+          import json
+          with open('index.json') as f:
+              data = json.load(f)
+          for v in data['verticals']:
+              print(v.get('homepage', ''))
+              print(v.get('repository', ''))
+              print(v.get('documentation', ''))
+          " | grep -v '^$')
+          for url in $urls; do
+            echo "Checking $url"
+            curl -f -s -o /dev/null "$url"
+          done
+
+  lint-markdown:
+    name: Lint Markdown Files (private)
+    if: >-
+      github.actor_id == '5168752' &&
+      github.event.pull_request.user.id == 5168752 &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    environment: owner-private-ci
+    runs-on: [self-hosted, Linux, X64, public-overflow]
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact PR head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ env.PR_HEAD_SHA }}
+          persist-credentials: false
+          clean: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '20'
+
+      - name: Lint markdown
+        run: >-
+          npx --yes markdownlint-cli2@0.20.0
+          --config .markdownlint.json
+          --ignore node_modules
+          '**/*.{md,markdown}'
