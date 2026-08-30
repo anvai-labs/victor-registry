@@ -43,6 +43,6 @@ assignees: ''
 
 <!-- If related to package validation, include output -->
 
-```
+```text
 {{ paste validation output here }}
 ```

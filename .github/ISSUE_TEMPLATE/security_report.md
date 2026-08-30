@@ -6,7 +6,7 @@ labels: security, urgent
 assignees: vjsingh1984
 ---
 
-⚠️ **IMPORTANT: For security vulnerabilities, please email vijay@anvaiops.com instead of creating a public issue. ⚠️
+⚠️ **IMPORTANT: For security vulnerabilities, please email <vijay@anvaiops.com> instead of creating a public issue.** ⚠️
 
 This issue template is provided for documentation purposes only.
 
@@ -52,4 +52,4 @@ This issue template is provided for documentation purposes only.
 
 ---
 
-**Remember**: For actual security vulnerabilities, please email vijay@anvaiops.com instead of using this template.
+**Remember**: For actual security vulnerabilities, please email <vijay@anvaiops.com> instead of using this template.
